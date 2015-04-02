@@ -1,31 +1,106 @@
 ---
-title: "Participation In Statistical Computing"
+title: "Digital literacy in modern statistics: Are we missing the boat?"
 author: "Kezia Manlove"
 date: "03/21/2015"
 output: ioslides_presentation
 ---
 
-## R Markdown
+## Introduction
+Question    Programming  Stat/bkgd   Stat Methods   Communication   Experience   
+--------    ----------- ----------  -------------   -------------  --------------
+GET job      12           10          10             3              3            
+PERFORM job  XXX          XXX         XXX            XXX            XXX         
+WISH had     9 + 3        0           7              3              3            
+Val'd exper  7                        6                             12 + 10 + 6  
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Table from ASA Workgroup on Master's Degrees (Wasserman ** et al.**, 2012)
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+**Recommendation 2: Programming skills are critical and should be infused throughout the graduate student experience **
 
-## Slide with Bullets
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+## Motivation
 
-## Slide with R Code and Output
+1. I'll believe your sob stories when you show me the evidence. 
+2.
 
-```{r}
-summary(cars)
-```
+## Questions
 
-## Slide with Plot
+1. Does software production matter for statisticians?
+2. Is there evidence for a gender gap in statistical computing?
+3. Does the statistical gender gap reflect the overall gap?
+4. Where are the women leaders in programming?
+5. Six steps to up your coding game
 
-```{r, echo=FALSE}
-plot(cars)
-```
+## Does software production matter for statisticians?
 
+- NSF program launched in 2011: Computational and Data-Enabled Science and Engineering in Math and Stat. Sciences
+- RJournal pubs among stats post-docs?
+
+
+## Is there evidence for a gender gap in statistical computing?
+
+- Jenny Bryan's analysis
+
+## Does the statistical gender gap reflect the overall gap?
+
+- Alyssa Frazee's analysis
+
+## Where are the women leaders in programming?
+
+- Karline Soetaert (deSolve)
+- Hana @ UW
+
+## Six steps to up your coding game
+
+1. Learn some basic logic
+  - for, which, while, with, do.call
+  - http://itfeature.com/statistical-sources-2/statistics-mcqs/statistical-software/mcqs-r-language
+2. Simulate
+3. Functionalize and think (a tiny bit) about code architecture
+4. Try using a terminal
+5. Experiment with running projects remotely
+6. Clean up!
+ - There exists a style guide!
+ https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml
+ - github through Rstudio for code management
+ - Rmd/md/knitr for annotation
+* Reach out/ask/do code reviews *
+ 
+## Ten week of comp. basics
+
+Week  Topic
+----- ----------------------------------------
+1     Linux via virtual machine
+2     Directories, structure, and github
+3     Markdown and LaTeX
+4     Basic logic and code style in R
+5     Remote access and working with a server
+6     Code architecture
+7     SQL
+8     C++
+9     Building R packages
+ 
+## Questions, comments, smart remarks
+
+## End
+ 
+ ## Survey questions
+ Survey questions
+
+1. When did you get your first computer?
+2. Did you play video games regularly before college?
+3. How old were you when you started programming?
+4. What is your operating system of choice?
+5. What was your first programming language?
+6. What is your preferred programming language?
+7. Why did you start programming?
+– to play games
+– out of curiosity
+– for research
+– because programs you needed did not exist
+9. List three major obstacles you encountered en route to becoming an R developer, and how you overcame them
+10. What do you wish you had known about statistical computing earlier in your career (e.g., learned a new language/learned basic logic/developed better architectural or stylistic strategies, etc.)?
+11. What advice would you give to young (especially) female statisticians who want to become better statistical programmers?
+12. Are you formally trained as a programmer (e.g., a BA/BS/MS/PhD in programming or CS, or at least two years experience as a software engineer/developer)?
+13. Are you formally trained as a statistician (e.g., a BA/BS/MS/PhD in statistics)?
+14. What is your age-group?
