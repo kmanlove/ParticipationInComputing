@@ -4,11 +4,10 @@
 # install_github("ropensci/rcrossref")
 require(rmetadata)
 require(rcrossref)
-
-crossref_search(query = c("renear", "palmer"), year = 2010)[, 1:3]
+require("gender")
 
 issns <- c("1467-9868", # Journal Roy Stat Soc Series B
-           # Annals of Mathematics
+                        # Annals of Mathematics
            "0003-486X", # Annals of Statistics
            "0090-5364", # Vital and health statistics. Series 13, Data from the National Health Survey
            "0083-2006", # Journal of Statistical Software
@@ -35,32 +34,10 @@ issns <- c("1467-9868", # Journal Roy Stat Soc Series B
            "1532-7906"  # Multivariate behavioural research
   )
 
-journal.test <- cr_journals(issn = issns[1], works = T, sample = 100, filter = c(from_pub_date = '2005-01-01'))
-# journal name is in the container.title field of journal.text
-test0 <- cr_cn(journal.test$data$DOI[1], format = "ris")
-# strip out author names
-authornames.front <- strsplit(test0[1], split = "\nAU")[[1]]
-number.authors <- length(authornames.front) - 1
-authornames.last <- strsplit(authornames.front[number.authors + 1], split = "\nPY")[[1]][1]
+source("./R/GetAuthorGenders.R")
+get.tests <- vector("list", length(issns))
 
-individ.authornames <- c(authornames.front[2 : max(2, (number.authors - 1))], authornames.last)
-authornodash <- unlist(strsplit(individ.authornames, split = c("-")))
-authorfirst <- strsplit(authornodash, split = c(","))
-getauthorfirst <- 
-
-test <- cr_works(query = "Journal of the Royal Statistical Society Series B", type = "journal-article")
-test2 <- cr_cn(doi = test$data$DOI[1])
-
-cr.test <- cr_r(container.title = journal.test$data$container.title[6])
-
-#sampled.dois <- journal.test$data$DOI
-sampled.refs <- cr_r(sample = 10, query = "Journal of the Royal Statistical Society Series B", )
-ref.extract <- cr_cn(dois = "10.1126/science.169.3946.635")
-ref.extract <- cr_cn(dois = sampled.dois[1:10])
-, format = "citeproc-json")
-
-
-doi.extract <- cr_r(issn = issns[1])
-
-cr.search.free.test <- cr_search_free(query = "Journal of the Royal Statistical Society. Series B: Statistical Methodology")
-doi.extract <- cr_r(cr.search.free.test$doi)
+for(i in 1:length(issns)){
+  get.tests[[i]] <- GetAuthorGenders(issn.in = issns[i], sample.in = 1000)
+  print(i)
+}
